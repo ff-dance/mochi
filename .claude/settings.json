@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodegen *)",
+      "Bash(xcodebuild *)",
+      "Bash(swift *)",
+      "Bash(scripts/check.sh*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "case \"$(jq -r '.tool_input.file_path // empty')\" in */project.yml) cd \"$CLAUDE_PROJECT_DIR\" && xcodegen generate >/dev/null 2>&1 ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}
