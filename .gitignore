@@ -3,3 +3,11 @@ xcuserdata/
 build/
 DerivedData/
 *.xcodeproj
+
+# 本地过程产物与凭证
+artifacts/
+qrcode*
+.env
+*.key
+.config/mochi/
+qqmusic_credential.json

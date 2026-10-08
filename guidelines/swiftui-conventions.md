@@ -10,7 +10,11 @@
 ## 依赖
 
 - 禁止引入第三方框架，需要时先询问用户。
-- 避免 UIKit/AppKit，除非 SwiftUI 无法实现并经用户同意。
+- 避免 UIKit/AppKit，除非 SwiftUI 无法实现并经用户同意。已批准例外：刘海悬浮岛的窗口层用 AppKit `NSPanel`，内容仍用 SwiftUI。
+
+## 视觉
+
+颜色、字体、间距、动画一律取自 `MochiTheme`，规则见 `design-system.md`；与 `swiftui-pro` 通用建议冲突时以 `design-system.md` 为准。
 
 ## 工作方式
 
